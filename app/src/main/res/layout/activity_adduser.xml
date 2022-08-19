@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/createuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USER CREATION"
+        android:textColor="@color/purple_200"
+        android:textSize="30sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/userfname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Firstname"
+        android:layout_below="@+id/createuser"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <EditText
+        android:id="@+id/userlname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Lastname"
+        android:layout_below="@+id/userfname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <EditText
+        android:id="@+id/useremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_below="@+id/userlname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <EditText
+        android:id="@+id/createusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_below="@+id/useremail"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+
+    <EditText
+        android:id="@+id/userpassw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/createusername"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <EditText
+        android:id="@+id/passwdconfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:layout_below="@+id/userpassw"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <Button
+        android:id="@+id/btncreateuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CREATE"
+        android:layout_below="@+id/passwdconfirm"
+        android:layout_marginTop="250dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+    <TextView
+        android:id="@+id/edittitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="EDIT USER DETAILS"
+        android:textSize="30sp"
+        android:textColor="#723AB6"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wasokologo"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/edittitle"
+        />
+    <EditText
+        android:id="@+id/edusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:hint="Enter Username"
+        android:textColorHint="#7E47C1"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edusername"
+        android:text="Search"
+        android:textColor="#0F0C73"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        />
+
+    <EditText
+        android:id="@+id/editfirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="first name"
+        android:textColorHint="#7E47C1"
+        android:layout_below="@+id/btnsearch"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        />
+    <EditText
+        android:id="@+id/editlastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="last name"
+        android:textColorHint="#7E47C1"
+        android:layout_below="@+id/editfirstname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        />
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:textColorHint="#7E47C1"
+        android:layout_below="@+id/editlastname"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        />
+    <EditText
+        android:id="@+id/editusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="user name"
+        android:textColorHint="#7E47C1"
+        android:layout_below="@+id/editemail"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColorHint="#7E47C1"
+        android:layout_below="@id/editusername"
+       app:hintEnabled="false"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/editpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:ems="10"
+            android:hint="password"
+            android:layout_below="@+id/editusername"
+            android:textColorHint="#7E47C1"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UPDATE DETAILS"
+        android:textColor="#0F0C73"
+        android:layout_below="@id/btnsearch"
+        android:layout_marginTop="270dp"
+
+        />
+
+</RelativeLayout>

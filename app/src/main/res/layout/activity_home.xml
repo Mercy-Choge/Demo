@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME PAGE"
+        android:textSize="40sp"
+        android:textColor="@color/purple_200"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="100dp"
+        />
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="50sp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        />
+    <Button
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit details"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        />
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="200dp"
+        />
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View users"
+        android:layout_below="@+id/btnEdit"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        />
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add users"
+        android:layout_below="@+id/btnEdit"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="200dp"
+        />
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT"
+        android:layout_below="@+id/btnDelete"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="0dp"
+        />
+</RelativeLayout>
