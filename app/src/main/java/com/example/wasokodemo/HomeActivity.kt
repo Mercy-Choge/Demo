@@ -26,7 +26,7 @@ class HomeActivity: AppCompatActivity() {
         }
             val buttonview= findViewById<Button>(R.id.btnView)
             buttonview.setOnClickListener {
-                val intent = Intent(this, ViewUserActivity::class.java)
+                val intent = Intent(this, UserAdapter::class.java)
                 startActivity(intent)
             }
             val buttonadd= findViewById<Button>(R.id.btnAdd)

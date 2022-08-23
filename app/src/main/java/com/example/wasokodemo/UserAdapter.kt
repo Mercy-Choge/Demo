@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wasokodemo.room.Users
 
 
-class ViewUserActivity (val listener: RowClickListener): RecyclerView.Adapter<ViewUserActivity.MyViewHolder>() {
+class UserAdapter(val listener: List<Users>): RecyclerView.Adapter<UserAdapter.MyViewHolder>() {
 
     var items = ArrayList<Users>()
 
@@ -17,12 +17,12 @@ class ViewUserActivity (val listener: RowClickListener): RecyclerView.Adapter<Vi
         this.items = data
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewUserActivity.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.MyViewHolder {
       val inflater = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_row, parent, false)
         return MyViewHolder(inflater, listener)
     }
 
-    override fun onBindViewHolder(holder: ViewUserActivity.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserAdapter.MyViewHolder, position: Int) {
         holder.itemView.setOnClickListener{
             listener.onItemClickListener(items[position])
         }
@@ -32,7 +32,7 @@ class ViewUserActivity (val listener: RowClickListener): RecyclerView.Adapter<Vi
     override fun getItemCount(): Int {
         return items.size
     }
-   class MyViewHolder (view: View, val listener: RowClickListener): RecyclerView.ViewHolder(view){
+   class MyViewHolder(view: View, val listener: List<Users>): RecyclerView.ViewHolder(view){
 
        val tvfName = itemView.findViewById<TextView>(R.id.tvfName)
        val tvlName = itemView.findViewById<TextView>(R.id.tvlName)
@@ -55,4 +55,12 @@ class ViewUserActivity (val listener: RowClickListener): RecyclerView.Adapter<Vi
         fun onEditUserClickListener (user:Users)
         fun onItemClickListener(user: Users)
     }
+}
+
+private fun <E> List<E>.onEditUserClickListener(data: Users) {
+
+}
+
+private fun <E> List<E>.onItemClickListener(user: Users) {
+
 }

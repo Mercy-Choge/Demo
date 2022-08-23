@@ -6,14 +6,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.lifecycle.Observer
 import androidx.room.Room
 import com.example.wasokodemo.room.UserDB
 import com.example.wasokodemo.room.Users
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class MainActivity : AppCompatActivity(), ViewUserActivity.RowClickListener {
+class MainActivity : AppCompatActivity(), UserAdapter.RowClickListener {
     var btnLogin: Button? = null
     var btnsign: Button? = null
     var username: EditText? = null
@@ -22,25 +21,12 @@ class MainActivity : AppCompatActivity(), ViewUserActivity.RowClickListener {
     private val context = this
 
 
-    lateinit var recyclerViewAdapter: ViewUserActivity
-    lateinit var viewModel: UserViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-
-       /*recyclerView.apply{
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            recyclerViewAdapter = RecyclerViewAdapter(this@MainActivity)
-            adapter = recyclerViewAdapter
-
-        }*/
-       /* viewModel = ViewModelProvider.of(this).get(MainActivityViewModel::class.java)*/
-        viewModel.getAllUsersObservers().observe(this, Observer {
-            recyclerViewAdapter.setListData(ArrayList(it))
-            recyclerViewAdapter.notifyDataSetChanged()
-        })
 
         handler = UserDB(this)
         username = findViewById(R.id.username)
@@ -115,6 +101,6 @@ class MainActivity : AppCompatActivity(), ViewUserActivity.RowClickListener {
     }
 
     override fun onItemClickListener(user: Users) {
-        TODO("Not yet implemented")
+
     }
 }

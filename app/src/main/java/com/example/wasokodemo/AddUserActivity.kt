@@ -74,7 +74,7 @@ class AddUserActivity: AppCompatActivity() {
                         ).show()
                         val intent = Intent(
                             context,
-                            ViewUserActivity::class.java
+                            UserAdapter::class.java
                         )
                         startActivity(intent)
                     }
